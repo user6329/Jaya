@@ -12,11 +12,16 @@ body {
     padding: 0;
     text-align: center;
     background: var(--sand_storm);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    
 }
-nav {
+nav {  
     background: var(--cinammon);
     padding: 1em;
     margin-bottom: 200px;
+    width: 100%;
 }
 nav a {
     color: white;
@@ -28,116 +33,51 @@ section {
     padding: 20px;
 }
 
-.container {
+.contact-container {
     display: grid;
-    grid-template-columns:repeat(2, 2fr) ;
-    height: 400px;
-    margin: 0 auto;
-    text-align: center;
-}
-.div-img{
-    display: grid;
-    grid-column: 2;
-    width: 400px;
-    height: 300px;
-    
-}
-
-.form-container {
-    display: grid;
-    grid-column: 1;
-    width: 600px;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
     background: var(--sand_storm);
-    backdrop-filter: blur(10px);
     border-radius: 25px;
     padding: 20px;
+    max-width: 800px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
-
-
-.form-box {
-    display: block;
+.contact-form {
+    display: grid;
+    justify-items: center;
     padding: 20px;
-    border-radius: 10px;
-    margin: 0 10px;
-    width: 300px;
-    text-align: center;
 }
-
-.form-box h2 {
-    color: var(--espreso);
-    margin-bottom: 20px;
-    font-size: 24px;
+.contact-form h2 {
+    color: var(--caramel);
 }
-
-
-.input-box {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.input-box input {
+.contact-form input, .contact-form textarea {
     width: 100%;
     padding: 10px;
+    margin: 10px 0;
+    border: solid var(--cinammon);
+    border-radius: 8px;
     background: transparent;
-    border: 1px solid var(--caramel);
-    border-radius: 5px;
-    outline: none;
-    color: var(--caramel) ;
-    font-size: 16px;
 }
-
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    background: var(--sand_storm);
-    border: solid var(--sand_storm);
-    border-radius: 25px ;
-    transform: translateY(-50%);
-    color: var(--caramel);
-    font-size: 16px;
-    transition: 0.3s;
-    pointer-events: none;
-}
-
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
-    top: 0;
-    font-size: 12px;
-    color: var(--caramel);
-}
-
-
-button {
+.contact-form button {
+    width: 100%;
     padding: 10px;
-    background: var(--espreso);
     border: none;
-    border-radius: 18px;
+    background: var(--espreso);
     color: var(--sand_storm);
     font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: var(--caramel) 0.3s ease;
 }
-
-button:hover {
+.contact-form button:hover {
     background: var(--caramel);
 }
-
-
-.register-link, .login-link {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.register-link a, .login-link a {
+.contact-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: var(--caramel);
-    text-decoration: none;
-    font-weight: bold;
 }
-
-.register-link a:hover, .login-link a:hover {
-    text-decoration: underline;
+.contact-info p {
+    margin: 5px 0;
 }
