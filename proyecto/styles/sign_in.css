@@ -12,7 +12,9 @@ body {
     padding: 0;
     text-align: center;
     background: var(--sand_storm);
+    
 }
+
 nav {
     background: var(--cinammon);
     padding: 1em;
@@ -24,29 +26,25 @@ nav a {
     margin: 0 15px;
     font-size: 18px;
 }
-section {
-    padding: 20px;
+
+nav a:hover {
+    color: #ffcc00; 
 }
 
 .container {
-    display: grid;
-    grid-template-columns:repeat(2, 2fr) ;
-    height: 400px;
+    display: flex;
+    justify-content: center;
+    width: 32%;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
-.div-img{
-    display: grid;
-    grid-column: 2;
-    width: 400px;
-    height: 300px;
-    
-}
+
+
 
 .form-container {
-    display: grid;
-    grid-column: 1;
-    width: 600px;
+    display: flex;
+    width: 400px;
     justify-content: center;
     align-items: center;
     background: var(--sand_storm);
