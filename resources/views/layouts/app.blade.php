@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <title>@yield('titulo')</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen m-0 p-0 bg-jaya-beige">
 
     <!-- Nav -->
-    <nav class="bg-gray-800 text-white p-4 flex gap-4">
-        <a href="{{ route('inicio') }}">Inicio</a>
-        <a href="{{ route('productos') }}">Productos</a>
-        <a href="{{ route('nosotros') }}">Nosotros</a>
-        <a href="{{ route('contacto') }}">Contacto</a>
-    </nav>
+<nav class="bg-jaya-obscuro text-white p-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-serif">JAYA</h1>
+    <ul class="flex space-x-4">
+      <li><a href="{{ route('inicio') }}" class="hover:text-jaya-dorado font-sans">Inicio</a></li>
+      <li><a href="{{route('productos')}}" class="hover:text-jaya-dorado font-sans ">Productos</a></li>
+      <li><a href="{{route('nosotros')}}" class="hover:text-jaya-dorado font-sans">Nosotros</a></li>
+      <li><a href="{{route('contacto')}}" class="hover:text-jaya-dorado font-sans">Contacto</a></li>
+      
+    </ul>
+  </div>
+</nav>
 
     <!-- Contenido -->
-    <main class="flex-grow p-6">
+    <main class="flex-grow p-0">
         @yield('contenido')
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#3e2723] text-white p-4 text-center">
+    <footer class="bg-jaya-obscuro text-white p-4 text-center">
         &copy; {{ date('Y') }} Mi Empresa. Todos los derechos reservados.
     </footer>
 </body>
