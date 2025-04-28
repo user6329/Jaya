@@ -19,6 +19,8 @@
       <li><a href="{{route('productos')}}" class="hover:text-jaya-dorado font-sans ">Productos</a></li>
       <li><a href="{{route('nosotros')}}" class="hover:text-jaya-dorado font-sans">Nosotros</a></li>
       <li><a href="{{route('contacto')}}" class="hover:text-jaya-dorado font-sans">Contacto</a></li>
+      <li><a href="{{route('login')}}" class="hover:text-jaya-dorado font-sans">Login</a></li>
+      <li><a href="{{route('register')}}" class="hover:text-jaya-dorado font-sans" >Register</a></li>
       
     </ul>
   </div>
