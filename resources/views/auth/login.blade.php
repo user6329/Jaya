@@ -29,6 +29,16 @@
         <a href="{{ route('register') }}" class="text-jaya-camel font-bold hover:underline">Regístrate</a>
       </p>
     </form>
+    @if ($errors->any())
+    <div class="bg-jaya-beige text-red-700 p-4 rounded mb-4">
+        <ul class="list-disc pl-5">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
   </div>
+ 
 </div>
 @endsection

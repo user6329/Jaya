@@ -37,6 +37,15 @@
         <a href="{{ route('login') }}" class="text-jaya-camel font-bold hover:underline">Iniciar Sesión</a>
       </p>
     </form>
+    @if ($errors->any())
+    <div class="bg-jaya-beige  text-red-700 px-4 py-3 rounded mb-4">
+        <ul class="list-disc list-inside">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
   </div>
 </div>
 @endsection
