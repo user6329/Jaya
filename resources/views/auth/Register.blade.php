@@ -9,8 +9,13 @@
       @csrf
 
       <div class="mb-4">
-        <label for="name" class="block text-jaya-beige mb-2">Nombre Completo</label>
+        <label for="name" class="block text-jaya-beige mb-2">Nombre</label>
         <input type="text" name="name" id="name" required class="w-full p-2 border rounded-lg bg-jaya-beige focus:outline-none focus:ring-2 focus:ring-jaya-camel">
+      </div>
+
+      <div class="mb-4">
+        <label for="lastname" class="block text-jaya-beige mb-2">Apellido</label>
+        <input type="text" name="lastname" id="lastname" required class="w-full p-2 border rounded-lg bg-jaya-beige focus:outline-none focus:ring-2 focus:ring-jaya-camel">
       </div>
 
       <div class="mb-4">
