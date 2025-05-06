@@ -19,8 +19,8 @@
       <li><a href="{{route('nosotros')}}" class="hover:text-jaya-dorado font-sans">Nosotros</a></li>
       <li><a href="{{route('contacto')}}" class="hover:text-jaya-dorado font-sans">Contacto</a></li>
       @auth
-        <span> {{Auth::user()-> name }} </span>
-       
+          <li><a href="{{route('perfil.mostrar')}}" class="hover:text-jaya-dorado font-sans">{{Auth::user()-> name }}</a></li>
+              
         <form action="{{ route('logout') }}" method="POST" class="inline">
           @csrf
           <button type="submit" class="hover:text-jaya-dorado" >Logout</button>

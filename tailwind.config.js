@@ -14,6 +14,7 @@ module.exports = {
           cuero: '#4a2e1e',
           obscuro: '#2d1d12',
           dorado: '#a68c5d',
+          camelClaro: '#DAB892',
         },
       },
       fontFamily: {

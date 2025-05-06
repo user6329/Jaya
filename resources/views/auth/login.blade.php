@@ -4,7 +4,7 @@
 
 @section('contenido')
 <div class="flex min-h-screen justify-center items-center bg-jaya-beige">
-  <div class="bg-jaya-obscuro p-8 rounded-2xl shadow-lg w-full max-w-md">
+  <div class="bg-jaya-obscuro p-8 rounded-2xl shadow-lg w-[500px] ">
     <h1 class="text-6xl font-serif pb-5 text-center text-jaya-dorado" >JAYA</h1>
     <h2 class="text-2xl pb-5 font-bold mb-6 text-jaya-beige text-center">Iniciar Sesión</h2>
     <form method="POST" action="{{ route('login') }}">
