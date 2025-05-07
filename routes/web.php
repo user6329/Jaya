@@ -23,5 +23,6 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::middleware(['auth'])->group(function () {
     Route::get('/perfil', [ProfileController::class, 'mostrar'])->name('perfil.mostrar');
     Route::get('/perfil/edit', [ProfileController::class, 'editar'])->name('perfil.edit');
-    Route::post('/perfil/actualizar', [ProfileController::class, 'actualizar'])->name('perfil.actualizar');
+    Route::post('/perfil/actualizar', [ProfileController::class, 'update'])->name('perfil.actualizar');
+
 });

@@ -3,7 +3,7 @@
 @section('titulo', 'Inicio')
 
 @section('contenido')
-    <div class="w-full h-[800px] bg-center bg-no-repeat bg-cover flex flex-col items-be justify-center"
+    <div class="w-full h-[895px] bg-center bg-no-repeat bg-cover flex flex-col items-be justify-center"
         style="background-image: url('{{ asset('img/banner2.jpg') }}')">
         <div class="justify-start flex flex-col">
             <h1 class=" text-jaya-beige text-7xl font-serif text-center">Bienvenido</h1>
