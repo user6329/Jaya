@@ -6,7 +6,7 @@
 
     <form action="{{ route('perfil.actualizar') }}" method="POST"  class="space-y-4">
         @csrf
-
+        @method('PUT')
         <input type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="Nombre" class="w-full border p-2 rounded">
         <input type="text" name="lastname" value="{{ old('lastname', $user->lastname) }}" placeholder="Apellido" class="w-full border p-2 rounded">
         <input type="email" name="email" value="{{ old('email', $user->email) }}" placeholder="Correo" class="w-full border p-2 rounded">

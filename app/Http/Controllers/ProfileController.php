@@ -20,29 +20,22 @@ class ProfileController extends Controller
     {
         return view('perfil.edit', ['user' => Auth::user()]);
     }
+    
     public function update(Request $request)
     {
+        $user = User::findOrFail(Auth::id());
         
-        $user = User::find(Auth::id());
-    
-        $request->validate([
+        $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'lastname' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|',
+            'email' => 'required|string|email|max:255|unique:users,email,'.$user->id,
             'phone' => 'required|string|max:20',
             'address' => 'required|string|max:255',
             'bio' => 'nullable|string',
         ]);
-    
-        $user->name = $request->name;
-        $user->lastname = $request->lastname;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
-        $user->address = $request->address;
-        $user->bio = $request->bio;
-    
-        $user->save();
-    
+        
+        $user->update($validatedData);
+        
         return redirect()->route('perfil.mostrar')->with('success', 'Perfil actualizado correctamente');
     }
     
